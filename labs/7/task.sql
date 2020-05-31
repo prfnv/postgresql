@@ -8,7 +8,8 @@ declare
             join recgoods on goods.id = recgoods.goods
             join recept on recept.id = recgoods.subid
         where recept.ddate >= d1 and recept.ddate <= d2
-        group by goods.g_group, recept.ddate;
+        group by goods.g_group, recept.ddate
+        order by goods.g_group, recept.ddate;
 
     cnt        int := 0;
     temp_cnt   int := 0;
